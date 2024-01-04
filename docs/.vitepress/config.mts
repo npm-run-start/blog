@@ -7,7 +7,7 @@ export default defineConfig({
   base: '/blog/',
   head: [['link', { rel: 'icon', href: '/blog/favicon.ico' }]],
   themeConfig: {
-    logo: '/blog/favicon.ico',
+    logo: '/logo.png',
     nav: [
       { text: '首页', link: '/' },
       { text: 'VUE3', link: '/vue3/base' },
@@ -23,9 +23,10 @@ export default defineConfig({
       },
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
-    ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/npm-run-start' }],
+    search: {
+      provider: 'local',
+    },
   },
   markdown: {
     // lineNumbers: true, // 行号
