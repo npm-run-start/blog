@@ -47,11 +47,13 @@ VITE_APP_BASE_URL = 'https://mock.apifox.com/m1/869889-0-default'
 
 ## vite.config.ts
 
+::: code-group
+
 ```ts
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { getFileExtName } from './src/utils/index'
 
 export default defineConfig(({ command, mode }) => {
   /**
@@ -71,6 +73,29 @@ export default defineConfig(({ command, mode }) => {
      * @param { 插件，同webpack 配置类似 }
      */
     plugins: [vue()],
+    build: {
+      /**
+       * @param { 扩展 rollup 构建选项 }
+       */
+      rollupOptions: {
+        output: {
+          /**
+           * @param { 静态资源分配路径 }
+           */
+          assetFileNames: (assetInfo) => {
+            const extName = getFileExtName(assetInfo.name as string)
+
+            if (/\.(jpg|png|jpeg|webp)$/.test(extName)) {
+              return 'assets/images/[name].[hash][extname]'
+            }
+            if (/\.(mp4|webm|ogg|mp3|wav|flac|aac)$/.test(extName)) {
+              return 'assets/media/[name].[hash][extname]'
+            }
+            return 'assets/[name].[hash][extname]'
+          },
+        },
+      },
+    },
     resolve: {
       /**
        * @param { 当使用文件系统路径的别名时，请始终使用绝对路径。 }
@@ -133,11 +158,24 @@ export default defineConfig(({ command, mode }) => {
 })
 ```
 
+```ts
+import path from 'path'
+
+/**
+ * @desc 提取文件后缀
+ * @param { fileUrl 文件路径 }
+ */
+export const getFileExtName = (fileUrl: string) => {
+  return path.extname(fileUrl)
+}
+```
+
 ## tsconfig 相关
 
 ::: code-group
 
 ```json [tsconfig.json]
+// 主配置文件，引用另外的 config.xxx.json
 {
   "files": [],
   "references": [
@@ -152,25 +190,31 @@ export default defineConfig(({ command, mode }) => {
 ```
 
 ```json [tsconfig.app.json]
+// 限制源码相关的配置文件
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": ["env.d.ts", "src/**/*"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      // 配合 alias 使用
+      "@/*": ["./src/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@models/*": ["./src/models/*"]
     }
   }
 }
 ```
 
 ```json [tsconfig.node.json]
+// 限制config相关的配置文件
 {
   "extends": "@tsconfig/node18/tsconfig.json",
   "include": [
+    "src/**/*.ts",
     "vite.config.*",
     "vitest.config.*",
     "cypress.config.*",
@@ -199,6 +243,8 @@ export default defineConfig(({ command, mode }) => {
 
 // 声明供全局使用
 declare const __APP_ENV__
+
+declare module 'path'
 ```
 
 ## Pinia
