@@ -49,7 +49,7 @@ VITE_APP_BASE_URL = 'https://mock.apifox.com/m1/869889-0-default'
 
 ::: code-group
 
-```ts
+```ts [vite.config.ts]
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -158,7 +158,7 @@ export default defineConfig(({ command, mode }) => {
 })
 ```
 
-```ts
+```ts [src/utils/index.ts]
 import path from 'path'
 
 /**
@@ -169,6 +169,8 @@ export const getFileExtName = (fileUrl: string) => {
   return path.extname(fileUrl)
 }
 ```
+
+:::
 
 ## tsconfig 相关
 
