@@ -5,7 +5,7 @@ export default defineConfig({
   title: "Zhan's Blog",
   description: '学习总结',
   base: '/blog/',
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [['link', { rel: 'icon', href: '/blog/favicon.ico' }]],
   themeConfig: {
     logo: '/logo.png',
     nav: [

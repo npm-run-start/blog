@@ -80,16 +80,26 @@ export default defineConfig(({ command, mode }) => {
       rollupOptions: {
         output: {
           /**
-           * @param { 静态资源分配路径 }
+           * @param { 该选项用于指定 chunks 的入口文件模式 }
+           */
+          entryFileNames: 'js/[name].js',
+          /**
+           * @param { 用于对代码分割中产生的 chunk 自定义命名 }
+           */
+          chunkFileNames: 'js/[name]-[hash].js',
+          /**
+           * @param { 用于自定义构建结果中的静态资源名称 }
            */
           assetFileNames: (assetInfo) => {
             const extName = getFileExtName(assetInfo.name as string)
-
             if (/\.(jpg|png|jpeg|webp)$/.test(extName)) {
               return 'assets/images/[name].[hash][extname]'
             }
             if (/\.(mp4|webm|ogg|mp3|wav|flac|aac)$/.test(extName)) {
               return 'assets/media/[name].[hash][extname]'
+            }
+            if (/\.css$/.test(extName)) {
+              return 'css/[name].[hash][extname]'
             }
             return 'assets/[name].[hash][extname]'
           },
@@ -159,7 +169,7 @@ export default defineConfig(({ command, mode }) => {
 ```
 
 ```ts [src/utils/index.ts]
-import path from 'path'
+import path from 'path-browserify'
 
 /**
  * @desc 提取文件后缀
@@ -246,7 +256,7 @@ export const getFileExtName = (fileUrl: string) => {
 // 声明供全局使用
 declare const __APP_ENV__
 
-declare module 'path'
+declare module 'path-browserify'
 ```
 
 ## Pinia
