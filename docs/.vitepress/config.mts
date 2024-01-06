@@ -8,6 +8,10 @@ export default defineConfig({
   head: [['link', { rel: 'icon', href: '/blog/favicon.ico' }]],
   themeConfig: {
     logo: '/logo.png',
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
     nav: [
       { text: '首页', link: '/' },
       { text: 'VUE3', link: '/vue3/base' },
