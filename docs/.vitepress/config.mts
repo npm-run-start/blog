@@ -24,9 +24,6 @@ export default defineConfig({
     ],
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/npm-run-start' }],
-    search: {
-      provider: 'local',
-    },
     docFooter: {
       prev: '上一页',
       next: '下一页',
@@ -38,6 +35,13 @@ export default defineConfig({
         dateStyle: 'medium',
         timeStyle: 'medium',
       },
+    },
+    editLink: {
+      pattern: 'https://github.com/npm-run-start/blog/tree/main/docs/:path',
+      text: '在GitHub上编辑此页',
+    },
+    search: {
+      provider: 'local',
     },
     returnToTopLabel: '回到顶部',
   },
