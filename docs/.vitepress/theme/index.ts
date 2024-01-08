@@ -1,12 +1,13 @@
 // https://vitepress.dev/guide/custom-theme
-import VssueLayout from './VssueLayout.vue'
+import Layout from './layout/Layout.vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+
 import './style.css'
 
 export default {
   extends: DefaultTheme,
-  Layout: VssueLayout,
+  Layout,
   enhanceApp({ app, router, siteData }) {
     //
   },

@@ -8,10 +8,6 @@ export default defineConfig({
   head: [['link', { rel: 'icon', href: '/blog/favicon.ico' }]],
   themeConfig: {
     logo: '/logo.png',
-    docFooter: {
-      prev: '上一页',
-      next: '下一页'
-    },
     nav: [
       { text: '首页', link: '/' },
       { text: 'VUE3', link: '/vue3/base' },
@@ -31,6 +27,19 @@ export default defineConfig({
     search: {
       provider: 'local',
     },
+    docFooter: {
+      prev: '上一页',
+      next: '下一页',
+    },
+    lastUpdated: {
+      text: '最近更新时间',
+      formatOptions: {
+        // full, medium, short
+        dateStyle: 'medium',
+        timeStyle: 'medium',
+      },
+    },
+    returnToTopLabel: '回到顶部',
   },
   markdown: {
     // lineNumbers: true, // 行号
@@ -39,5 +48,4 @@ export default defineConfig({
       lazyLoading: true,
     },
   },
-  lastUpdated: true,
 })
