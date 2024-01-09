@@ -10,11 +10,12 @@ const init = () => {
     repo: 'blog-comments', // The repository of store comments,
     owner: 'npm-run-start',
     admin: ['npm-run-start'],
-    id: location.href,
+    id: location.pathname,
     createIssueManually: true,
+    distractionFreeMode: false,
   })
 
-  gitalk.render('commentRef')
+  gitalk.render('gitalk-container')
 }
 
 onMounted(() => {
@@ -23,5 +24,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="commentRef"></div>
+  <div id="gitalk-container"></div>
 </template>
