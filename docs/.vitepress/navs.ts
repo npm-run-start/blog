@@ -15,6 +15,13 @@ export const navs = [
     items: [{ text: '基础', link: '/three/base' }],
   },
   {
+    text: 'CSS预编译',
+    items: [
+      { text: 'sass', link: '/css/sass' },
+      { text: 'stylus', link: '/css/stylus' },
+    ],
+  },
+  {
     text: '工具',
     items: [
       { text: 'Git', link: '/tools/git' },
