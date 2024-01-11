@@ -7,6 +7,10 @@ export const navs = [
     ],
   },
   {
+    text: 'Uni-APP',
+    items: [{ text: '基础', link: '/uni-app/base' }],
+  },
+  {
     text: 'ThreeJS',
     items: [{ text: '基础', link: '/three/base' }],
   },
