@@ -26,6 +26,6 @@ features:
     link: https://developers.weixin.qq.com/doc/
   - title: 生活
     icon: { src: /happy.png, alt: 'happy' }
-    details: 记录那些美好回忆～
+    details: 原谅我这一生不羁放纵爱自由～
     link: '404'
 ---

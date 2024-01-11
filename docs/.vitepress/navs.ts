@@ -14,7 +14,7 @@ export const navs = [
     text: '工具',
     items: [
       { text: 'Git', link: '/tools/git' },
-      { text: 'Linux', link: '/tools/linux' },
+      { text: 'Linux操作', link: '/tools/linux' },
     ],
   },
 ]
