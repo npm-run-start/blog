@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { navs } from './navs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -7,20 +8,13 @@ export default defineConfig({
   base: '/blog/',
   head: [['link', { rel: 'icon', href: '/blog/favicon.ico' }]],
   themeConfig: {
-    logo: '/logo.png',
-    nav: [
-      { text: '首页', link: '/' },
-      { text: 'VUE3', link: '/vue3/base' },
-    ],
+    logo: '/shield.png',
+    nav: [{ text: '首页', link: '/' }, ...navs],
     sidebar: [
-      {
-        text: 'VUE3',
+      ...navs.map((v) => ({
+        ...v,
         collapsed: true,
-        items: [
-          { text: '基础框架', link: '/vue3/base' },
-          { text: '深入源码', link: '/vue3/source-code' },
-        ],
-      },
+      })),
     ],
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/npm-run-start' }],
@@ -46,9 +40,7 @@ export default defineConfig({
     returnToTopLabel: '回到顶部',
   },
   markdown: {
-    // lineNumbers: true, // 行号
     image: {
-      // image lazy loading is disabled by default
       lazyLoading: true,
     },
   },
