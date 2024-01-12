@@ -32,7 +32,9 @@ export const navs = [
   {
     text: '工具',
     items: [
-      { text: 'Git 协同', link: '/tools/git' },
+      { text: '帧动画', link: '/tools/keyframe' },
+      { text: '背景音乐', link: '/tools/music' },
+      { text: '微信授权登录', link: '/tools/wechat-auth' },
       { text: 'Linux 操作', link: '/tools/linux' },
       { text: 'ES6 +', link: '/tools/es6' },
     ],
