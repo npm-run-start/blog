@@ -95,6 +95,8 @@ $ git remote add origin git@server-name:path/repo-name.git
 $ git push -u origin master
 // 此后，每次本地提交后，只要有必要，就可以推送最新修改
 $ git push origin master
+// 修改remote rep 地址
+git remote set-url origin [url]
 ```
 
 ### 从远程库克隆

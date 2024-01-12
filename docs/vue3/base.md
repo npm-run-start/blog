@@ -1,6 +1,7 @@
 # 搭建基础框架
 
 基于 Vite + Vue3 + Typescript + Pinia + Axios + Mock
+[源码已上传](https://github.com/npm-run-start/vite_vue3.git)
 
 ## 初始化
 
