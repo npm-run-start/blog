@@ -26,6 +26,6 @@ features:
     link: https://developers.weixin.qq.com/doc/
   - title: 生活
     icon: { src: /happy.png, alt: 'happy' }
-    details: 原谅我这一生不羁放纵爱自由～
+    details: Life is a fucking movie
     link: '404'
 ---
