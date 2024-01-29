@@ -154,7 +154,15 @@
     background: #bd34fe;
   }
 
+  25% {
+    background: #ff0;
+  }
+
   50% {
+    background: #0f0;
+  }
+
+  75% {
     background: #41d1ff;
   }
 }
