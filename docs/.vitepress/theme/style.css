@@ -43,7 +43,7 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
- :root {
+:root {
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
@@ -137,3 +137,32 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+@keyframes clipAnimation {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes bgAnimation {
+  0%,
+  100% {
+    background: #bd34fe;
+  }
+
+  50% {
+    background: #41d1ff;
+  }
+}
+
+.clip {
+  animation: clipAnimation 2s infinite linear;
+}
+
+.image-bg {
+  animation: bgAnimation 3s infinite linear;
+}
