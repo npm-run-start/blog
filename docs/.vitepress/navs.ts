@@ -19,8 +19,11 @@ export const navs = [
     items: [{ text: '基础', link: '/uni-app/base' }],
   },
   {
-    text: 'ThreeJS',
-    items: [{ text: '基础', link: '/three/base' }],
+    text: '微前端',
+    items: [
+      { text: 'single-spa', link: 'https://zh-hans.single-spa.js.org/docs/' },
+      { text: 'qiankun', link: '/microfront/qiankun' },
+    ],
   },
   {
     text: 'CSS 预编译',

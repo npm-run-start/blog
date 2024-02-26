@@ -1,4 +1,10 @@
 {
+  "name": "blog",
+  "author": {
+    "name": "展名扬",
+    "email": "912419071@qq.com"
+  },
+  "license": "MIT",
   "devDependencies": {
     "sass": "^1.69.7",
     "vitepress": "^1.0.0-rc.34"
