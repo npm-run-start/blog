@@ -333,6 +333,25 @@ export const useNameStore = defineStore('name', {
 })
 ```
 
+```ts [src/main.ts]
+import './assets/main.css'
+
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+
+import App from './App.vue'
+import router from './router'
+
+const app = createApp(App)
+
+app.use(createPinia())
+app.use(router)
+
+app.mount('#app')
+
+console.log(__APP_ENV__.NODE_ENV, '------ENV')
+```
+
 :::
 
 ## Axios + Mock（Apifox）
