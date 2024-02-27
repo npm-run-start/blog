@@ -6,10 +6,10 @@ hero:
   name: '遥遥领先'
   # text: 'Bug终结者'
   image: /ultraman.png
-  tagline: 探索需求背后的业务逻辑，用技术提升用户体验
+  tagline: 探索业务痛点，用技术提升用户体验
   actions:
     - theme: brand
-      text: VUE3 相关
+      text: VUE3 搭建
       link: /vue3/base
     - theme: alt
       text: 常用工具

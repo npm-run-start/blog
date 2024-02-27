@@ -30,9 +30,9 @@ export const navs = [
       { text: '帧动画', link: '/tools/keyframe' },
       { text: '背景音乐', link: '/tools/music' },
       { text: '微信授权登录', link: '/tools/wechat-auth' },
+      { text: 'ES6 +', link: '/tools/es6' },
       { text: 'Git 操作', link: '/tools/git' },
       { text: 'Linux 操作', link: '/tools/linux' },
-      { text: 'ES6 +', link: '/tools/es6' },
       {
         text: 'CSS 预编译',
         items: [

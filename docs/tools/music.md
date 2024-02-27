@@ -30,9 +30,9 @@ export function createMusic(type) {
   const img = new Image()
   img.src = `images/music.png`
 
-  const jukebox = document.createElement('div')
-  jukebox.classList.add('music')
-  jukebox.appendChild(img)
+  const box = document.createElement('div')
+  box.classList.add('music')
+  box.appendChild(img)
 
   const audio = document.createElement('audio')
   audio.src = `media/${type}.mp3`
@@ -40,16 +40,16 @@ export function createMusic(type) {
 
   const section = document.createElement('section')
   // section.classList.add(`${type}Music`);
-  section.appendChild(jukebox)
+  section.appendChild(box)
   section.appendChild(audio)
 
   playMusic(audio)
 
-  jukebox.onclick = function () {
-    jukebox.classList.contains('stop') ? audio.play() : audio.pause()
-    jukebox.classList.contains('stop')
-      ? jukebox.classList.remove('stop')
-      : jukebox.classList.add('stop')
+  box.onclick = function () {
+    box.classList.contains('stop') ? audio.play() : audio.pause()
+    box.classList.contains('stop')
+      ? box.classList.remove('stop')
+      : box.classList.add('stop')
   }
   document.body.appendChild(section)
 
