@@ -1,10 +1,16 @@
 # qiankun
 
-demo 基于 [蚂蚁金服 qiankun 框架](https://qiankun.umijs.org/zh/guide)，主应用 main + 两个微应用 app-1、app-2，均基于 Vite + Vue3 + Element-plus，实现路由访问不同微前端应用，[源码已上传](https://github.com/npm-run-start/qiankun.git)
+::: info [蚂蚁金服 qiankun 框架](https://qiankun.umijs.org/zh/guide)
+主应用 main + 两个微应用 app-1、app-2，均基于 Vite + Vue3 + Element-plus
+<br />
+源码包含动态路由，结合 Apifox 进行 mock 数据 [源码已上传](https://github.com/npm-run-start/qiankun.git)
+<br />
+此处代码，仅实现 qiankun 微前端路由访问功能，具体需要拓展
+:::
 
 ## 效果
 
-![](/qiankun.png)
+![](/qiankun.jpg)
 
 ## 主应用 main
 
