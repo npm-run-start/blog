@@ -5,7 +5,7 @@
 <br />
 源码包含动态路由，结合 Apifox 进行 mock 数据 [源码已上传](https://github.com/npm-run-start/qiankun.git)
 <br />
-此处代码，仅实现 qiankun 微前端路由访问功能，具体需要拓展
+本博客代码，仅实现 qiankun 微前端路由访问功能，很简约
 :::
 
 ## 效果
