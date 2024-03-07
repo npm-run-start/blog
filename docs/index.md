@@ -12,7 +12,7 @@ hero:
       text: VUE3 搭建
       link: /vue3/base
     - theme: alt
-      text: 常用工具
+      text: 工具
       link: /tools/git
 
 features:
@@ -29,3 +29,14 @@ features:
     details: Life is a fucking movie
     link: '404'
 ---
+
+> LINKS
+
+<script setup lang="ts">
+import Icons from './components/Icons.vue'
+</script>
+
+<Icons />
+
+<!-- 带图标的链接 -->
+<!-- [![xx](icons/unocss.svg)](https://unocss.dev) -->

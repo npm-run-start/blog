@@ -36,6 +36,9 @@ export const navs = [
       {
         text: 'CSS 预编译',
         items: [
+          { text: 'UnoCSS(推荐)', link: 'https://unocss.dev/' },
+          { text: 'Tailwind CSS(太大)', link: 'https://www.tailwindcss.cn/' },
+          { text: 'Windi CSS(停止维护)', link: 'https://cn.windicss.org/' },
           { text: 'Sass', link: '/css/sass' },
           { text: 'Stylus', link: '/css/stylus' },
         ],
