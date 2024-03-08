@@ -1,6 +1,11 @@
 <script setup lang="ts">
 const list = [
   // { icon: 'icons/Vue.png', link: 'https://cn.vuejs.org', txt: 'VUE' },
+  {
+    icon: 'icons/creative.png',
+    link: 'https://www.creative-tim.com',
+    txt: 'Creative',
+  },
   { icon: 'icons/UnoCSS.svg', link: 'https://unocss.dev', txt: 'UnoCSS' },
   {
     icon: 'icons/tailwindcss.png',
@@ -23,15 +28,17 @@ const list = [
     txt: 'Qiankun',
   },
 ]
+
+const linkClick = (url: string) => {
+  window.open(url)
+}
 </script>
 
 <template>
   <ul>
-    <li v-for="(item, i) of list" :key="i">
-      <a :href="item.link">
-        <img :src="item.icon" />
-        <p>{{ item.txt }}</p>
-      </a>
+    <li v-for="(item, i) of list" :key="i" @click="linkClick(item.link)">
+      <img :src="item.icon" />
+      <span>{{ item.txt }}</span>
     </li>
   </ul>
 </template>
@@ -40,27 +47,34 @@ const list = [
 ul {
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
   align-items: center;
+
   li {
-    width: 20%;
-    list-style: none;
+    width: 16.66%;
+    height: 80px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
 
-    a {
+    img {
+      height: 50px;
+    }
+
+    span {
       color: #ccc;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      img {
-        width: 40px;
-      }
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}
 
-      p {
-        line-height: 1;
-        font-size: 12px;
-        font-weight: bold;
-      }
+@media only screen and (max-width: 800px) {
+  ul {
+    li {
+      width: 20%;
     }
   }
 }

@@ -34,13 +34,13 @@ export const navs = [
       { text: 'Git 操作', link: '/tools/git' },
       { text: 'Linux 操作', link: '/tools/linux' },
       {
-        text: 'CSS 预编译',
+        text: 'CSS',
         items: [
-          { text: 'UnoCSS(推荐)', link: 'https://unocss.dev/' },
-          { text: 'Tailwind CSS(太大)', link: 'https://www.tailwindcss.cn/' },
-          { text: 'Windi CSS(停止维护)', link: 'https://cn.windicss.org/' },
           { text: 'Sass', link: '/css/sass' },
           { text: 'Stylus', link: '/css/stylus' },
+          { text: 'UnoCSS（按需加载）', link: 'https://unocss.dev/' },
+          { text: 'Tailwind CSS（太大）', link: 'https://www.tailwindcss.cn/' },
+          { text: 'Windi CSS（不再维护）', link: 'https://cn.windicss.org/' },
         ],
       },
     ],

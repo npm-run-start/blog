@@ -30,7 +30,11 @@ features:
     link: '404'
 ---
 
-> LINKS
+<br>
+
+**LINKS**
+
+<br>
 
 <script setup lang="ts">
 import Icons from './components/Icons.vue'
