@@ -45,6 +45,7 @@ const linkClick = (url: string) => {
 
 <style lang="scss" scoped>
 ul {
+  padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
