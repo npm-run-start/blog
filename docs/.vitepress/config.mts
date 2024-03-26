@@ -4,7 +4,7 @@ import { navs } from './navs'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Zhan's Blog",
-  description: '学习总结',
+  description: '遥遥领先',
   base: '/blog/',
   head: [['link', { rel: 'icon', href: '/blog/favicon.ico' }]],
   themeConfig: {
