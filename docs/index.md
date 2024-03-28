@@ -6,7 +6,7 @@ hero:
   name: '遥遥领先'
   # text: 'Bug终结者'
   image: /ultraman.png
-  tagline: 探索业务痛点，用技术提升用户体验
+  tagline: 立志成为全栈
   actions:
     - theme: brand
       text: VUE3 搭建
